@@ -5,5 +5,5 @@ window.LunaConfig = {
   server: '',
   allowCustomServer: true,
   siteName: 'Luna',
-  downloadUrl: 'downloads/LunaSetup.exe'
+  downloadUrl: 'https://github.com/Luna-devworks/Luna/releases/latest/download/LunaSetup.exe'
 };
