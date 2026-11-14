@@ -2,8 +2,9 @@
    server: your Render URL, e.g. 'https://luna-server.onrender.com'  (leave '' to let players type an address)
    allowCustomServer: false hides the server box so players just log in. */
 window.LunaConfig = {
-  server: '',
-  allowCustomServer: true,
+  server: 'https://luna-iicp.onrender.com',
+  allowCustomServer: false,
   siteName: 'Luna',
-  downloadUrl: 'downloads/LunaSetup.exe'
+  downloadUrl: 'https://github.com/Luna-devworks/Luna/releases/latest/download/LunaSetup.exe'
 };
+ // stuff

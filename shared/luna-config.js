@@ -3,7 +3,7 @@
    allowCustomServer: false hides the server box so players just log in. */
 window.LunaConfig = {
   server: 'https://luna-iicp.onrender.com',
-  allowCustomServer: true,
+  allowCustomServer: false,
   siteName: 'Luna',
   downloadUrl: 'https://github.com/Luna-devworks/Luna/releases/latest/download/LunaSetup.exe'
 };
