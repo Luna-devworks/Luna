@@ -1,0 +1,4 @@
+node_modules/
+Client/dist/
+luna-data/
+.env

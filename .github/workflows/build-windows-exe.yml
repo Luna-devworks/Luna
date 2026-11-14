@@ -1,0 +1,21 @@
+name: Build Luna Windows EXE
+on: { workflow_dispatch: {}, push: { tags: ['v*'] } }
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Download three.js
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force shared/vendor | Out-Null
+          Invoke-WebRequest https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js -OutFile shared/vendor/three.min.js
+      - run: node sync-shared.js
+      - run: npm install
+        working-directory: Client
+      - run: npm run dist
+        working-directory: Client
+      - uses: actions/upload-artifact@v4
+        with: { name: Luna-Windows, path: "Client/dist/*.exe" }

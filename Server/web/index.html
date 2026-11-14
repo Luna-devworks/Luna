@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#14111c"><title>Luna - build and play blocky worlds</title>
+<link rel="icon" href="shared/logo.png"><link rel="stylesheet" href="shared/luna.css">
+<style>
+body{overflow:auto}.lp{max-width:1000px;margin:0 auto;padding:0 20px}
+.lp nav{display:flex;align-items:center;gap:12px;padding:18px 0;border-bottom:2px solid var(--line)}.lp nav img{width:34px;height:34px}.lp nav b{font-size:20px;letter-spacing:.04em;text-transform:uppercase}.lp nav .sp{flex:1}
+.hero{padding:64px 0 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1;margin:0 0 16px;text-transform:uppercase;letter-spacing:.01em}.hero h1 em{color:var(--acc);font-style:normal}
+.hero p{font-size:18px;color:var(--mut);max-width:46ch}.hero .row{margin-top:24px;gap:12px}
+.hero .art{aspect-ratio:1;border:2px solid var(--line);background:linear-gradient(160deg,#FF7A00,#2a2040);box-shadow:8px 8px 0 #000;display:grid;place-items:center}.hero .art img{width:55%;filter:drop-shadow(4px 4px 0 #000)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:56px}
+.feat div{border:2px solid var(--line);background:var(--card,#1d1829);padding:18px;box-shadow:4px 4px 0 #000}.feat h3{margin:0 0 8px;text-transform:uppercase;font-size:15px;letter-spacing:.06em;color:var(--acc)}.feat p{margin:0;color:var(--mut);font-size:14px}
+footer{border-top:2px solid var(--line);padding:20px 0 40px;color:var(--mut);font-size:13px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:32px}.feat{grid-template-columns:1fr}}
+</style></head><body>
+<div class="lp">
+<nav><img src="shared/logo.png" alt=""><b>Luna</b><span class="sp"></span><a class="btn sm alt" href="account.html">Log in</a></nav>
+<section class="hero"><div><h1>Build it. <em>Play it.</em> Wear it.</h1>
+<p>Luna is a free blocky 3D world platform. Make games in Luna Studio, play with friends on PC or phone, dress your avatar and collect limited items with Moon Dust.</p>
+<div class="row"><a class="btn" id="dl" href="downloads/LunaSetup.exe">Download for Windows</a><a class="btn alt" href="account.html">Play in browser (mobile)</a></div></div>
+<div class="art"><img src="shared/logo.png" alt=""></div></section>
+<section class="feat"><div><h3>Luna Studio</h3><p>Build worlds with blocks, script them in JavaScript, test instantly, then publish with a title and description.</p></div>
+<div><h3>Avatar and shop</h3><p>Hats, faces, shirts and more. Limited and unique items are released by Luna.</p></div>
+<div><h3>Moon Dust</h3><p>Free currency. Claim 50 or more every 5 hours. No purchases, ever.</p></div></section>
+<footer>Luna. Made for fun.</footer></div>
+<script src="shared/luna-config.js"></script>
+<script>try{var u=LunaConfig.downloadUrl;if(u)document.getElementById('dl').href=u}catch(e){}</script>
+</body></html>

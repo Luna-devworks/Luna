@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: luna-server
+    runtime: node
+    rootDir: Server
+    buildCommand: echo "no build needed"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    plan: free
+    envVars:
+      - key: LUNA_OWNER
+        sync: false
+      - key: LUNA_OWNER_CODE
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
